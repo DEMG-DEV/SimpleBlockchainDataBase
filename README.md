@@ -30,3 +30,8 @@ Python >= 3.6
 - **Test1.py**, This test just creates the genesis block of the blockchain.
 - **Test2.py**, This test add a one block to the blockchain and prints the blocks.
 - **Test3.py**, This test add 2 blocks into the blockchain, prints the blocks and validate the blockchain. 
+
+## Install
+```
+python -m pip install --index-url https://test.pypi.org/simple/ BlockchainDataBase
+```
