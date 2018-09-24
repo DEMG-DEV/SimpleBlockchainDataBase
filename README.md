@@ -1,6 +1,8 @@
 # SimpleBlockchainDatabase
 In this repository you can found a simple Database based on blockchain technology.
 
+> **IN THIS MOMENT THE DATABASE JUST WORK AS LOCALLY**
+
 ## Version
 **1.0.0**
 
