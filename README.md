@@ -32,6 +32,12 @@ Python >= 3.6
 - **Test3.py**, This test add 2 blocks into the blockchain, prints the blocks and validate the blockchain. 
 
 ## Install
+From test.pypi.org
 ```
 python -m pip install --index-url https://test.pypi.org/simple/ BlockchainDataBase
+```
+
+From official pypi.org
+```
+python -m pip install BlockchainDataBase
 ```
