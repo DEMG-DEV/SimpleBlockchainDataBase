@@ -1,6 +1,8 @@
 # SimpleBlockchainDatabase
 In this repository you can found a simple Database based on blockchain technology.
 
+> **IN THIS MOMENT THE DATABASE JUST WORK AS LOCALLY**
+
 ## Version
 **1.0.0**
 
@@ -30,3 +32,14 @@ Python >= 3.6
 - **Test1.py**, This test just creates the genesis block of the blockchain.
 - **Test2.py**, This test add a one block to the blockchain and prints the blocks.
 - **Test3.py**, This test add 2 blocks into the blockchain, prints the blocks and validate the blockchain. 
+
+## Install
+From test.pypi.org
+```
+python -m pip install --index-url https://test.pypi.org/simple/ BlockchainDataBase
+```
+
+From official pypi.org
+```
+python -m pip install BlockchainDataBase
+```
