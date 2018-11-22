@@ -3,11 +3,12 @@ from BlockchainDataBase.Block import Block
 
 
 class DBManage:
-    def __init__(self, sqlite_file):
-        self.conn = sqlite3.connect(sqlite_file)
+    def __init__(self):
+        self.conn = sqlite3.connect("blockchain_database.bc")
         self.cursor = self.conn.cursor()
+        self.create_table()
 
-    def createTabe(self):
+    def create_table(self):
         try:
             self.cursor.execute("CREATE TABLE blockchain( "
                                 "time_stamp DateTime,"
@@ -20,7 +21,7 @@ class DBManage:
         except:
             pass
 
-    def Create(self, block):
+    def create(self, block):
         val = "INSERT INTO blockchain(time_stamp,data,previous_hash,nonce,id,hash) VALUES(\"" + str(
             block.time_stamp) + "\",\"" + str(block.data) + "\",\"" + str(block.previous_hash) + "\"," + str(
             block.nonce) + "," + str(block.index) + ",\"" + str(block.hash) + "\")"
@@ -28,12 +29,13 @@ class DBManage:
         self.cursor.execute(val)
         self.conn.commit()
 
-    def previousData(self):
-        self.cursor.execute("SELECT previous_hash, id FROM blockchain ORDER BY id DESC LIMIT 1")
+    def previous_data(self):
+        self.cursor.execute(
+            "SELECT previous_hash, id FROM blockchain ORDER BY id DESC LIMIT 1")
         value = self.cursor.fetchall()
         return value[0][0], value[0][1]
 
-    def loadBlockchain(self, blockchain):
+    def load_blockchain(self, blockchain):
         self.cursor.execute("SELECT * FROM blockchain")
         values = self.cursor.fetchall()
         for index, values in enumerate(values):
@@ -46,5 +48,5 @@ class DBManage:
             block.hash = str(values[5])
             blockchain.chain.append(block)
 
-    def closeDB(self):
+    def close_db(self):
         self.conn.close()

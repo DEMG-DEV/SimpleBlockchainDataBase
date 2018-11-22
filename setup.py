@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="BlockchainDataBase",
-    version="1.0.0",
+    version="1.1.0",
     author="David Mendez Guardado",
     author_email="demg@outlook.com",
     description="A Simple Blockchain Database.",

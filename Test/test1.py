@@ -1,16 +1,14 @@
 '''
 Generates the Genesis Block of the chain if no exist
 '''
-
 from BlockchainDataBase.Data.DBManage import DBManage
 from BlockchainDataBase.Blockchain import Blockchain
 
-local = DBManage("database.bc")
-local.createTabe()
+local = DBManage()
 
 bc = Blockchain()
-local.loadBlockchain(bc)
+local.load_blockchain(bc)
 
 if len(bc.chain) < 1:
     bc.genesis_block()
-    local.Create(bc.chain[len(bc.chain) - 1])
+    local.create(bc.chain[len(bc.chain) - 1])

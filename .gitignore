@@ -3,3 +3,5 @@ build
 BlockchainDataBase.egg-info
 .idea
 *.pyc
+/.sonarlint
+*.bc

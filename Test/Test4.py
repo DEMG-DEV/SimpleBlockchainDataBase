@@ -1,5 +1,5 @@
 '''
-Generates the Genesis Block and add one block of data to the chain.
+Print all the current blocks.
 '''
 
 from BlockchainDataBase.Data.DBManage import DBManage
@@ -14,7 +14,4 @@ if len(bc.chain) < 1:
     bc.genesis_block()
     local.create(bc.chain[len(bc.chain) - 1])
 
-data = {"Data": "dataResult"}
-bc.add_block(data)
-local.create(bc.chain[len(bc.chain) - 1])
 bc.print_blocks()

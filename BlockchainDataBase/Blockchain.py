@@ -43,6 +43,7 @@ class Blockchain:
             if current.previous_hash != previous.generate_hash():
                 print("The previous block's hash does not equal the previous hash value stored in the current block.")
                 return False
+        print("Hash is Valid")
         return True
 
     def proof_of_work(self, block, difficulty=2):
