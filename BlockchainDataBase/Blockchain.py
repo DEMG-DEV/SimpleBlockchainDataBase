@@ -1,4 +1,5 @@
 from BlockchainDataBase.Block import Block
+from BlockchainDataBase.Data.DBManage import DBManage
 
 
 class Blockchain:
@@ -7,6 +8,8 @@ class Blockchain:
         Initialize the chain.
         '''
         self.chain = []
+        self.data_base = DBManage()
+        self.data_base.load_blockchain(self)
 
     def genesis_block(self):
         '''
@@ -18,6 +21,7 @@ class Blockchain:
         genesis_block = Block(data, "0", 0)
         genesis_block.generate_hash()
         self.chain.append(genesis_block)
+        self.data_base.create(self.chain[len(self.chain) - 1])
 
     def add_block(self, data):
         previous_hash = (self.chain[len(self.chain) - 1]).hash
@@ -25,6 +29,7 @@ class Blockchain:
         new_block.generate_hash()
         proof = self.proof_of_work(new_block)
         self.chain.append(new_block)
+        self.data_base.create(self.chain[len(self.chain) - 1])
         return proof, new_block
 
     def print_blocks(self):
