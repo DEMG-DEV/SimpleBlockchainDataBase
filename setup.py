@@ -10,6 +10,7 @@ setuptools.setup(
     author_email="demg@outlook.com",
     description="A Simple Blockchain Database.",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url="https://github.com/DEMG-DEV/SimpleBlockchainDataBase",
     packages=setuptools.find_packages(),
     classifiers=[
