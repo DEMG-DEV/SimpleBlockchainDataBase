@@ -1,12 +1,26 @@
+import json
+import os
 import sqlite3
 from BlockchainDataBase.Block import Block
 
 
 class DBManage:
     def __init__(self):
-        self.conn = sqlite3.connect("blockchain_database.bc")
+        self.load_config()
+        self.conn = sqlite3.connect(
+            self.database_location + self.database_name)
         self.cursor = self.conn.cursor()
         self.create_table()
+
+    def load_config(self):
+        cwd = os.path.dirname(os.path.realpath(__file__))
+        with open(cwd + '\\config.json') as json_data_file:
+            data = json.load(json_data_file)
+
+        self.database_name = data['DEFAULT']['DATABASE_NAME']
+        self.database_location = os.environ['APPDATA'] + data['DEFAULT']['DATABASE_LOCATION']
+        if not os.path.exists(self.database_location):
+            os.makedirs(self.database_location)
 
     def create_table(self):
         try:

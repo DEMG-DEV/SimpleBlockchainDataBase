@@ -18,6 +18,7 @@ Python >= 3.6
 │   ├── Data
 │   │   ├── __init__.py
 │   │   ├── DBManage.py
+│   │   ├── config.json
 │   ├── __init__.py
 │   ├── Block.py
 │   ├── Blockchain.py
@@ -46,6 +47,25 @@ python -m pip install --index-url https://test.pypi.org/simple/ BlockchainDataBa
 From official pypi.org
 ```
 python -m pip install BlockchainDataBase
+```
+
+## Configuration
+On the folder you found a configuration file in a JSON format, if you want to change the folder on the database or database name you do in this file.
+```
+# The data saves on %APPDATA% directory.
+├── BlockchainDataBase
+│   ├── Data
+│   │   ├── config.json
+```
+```
+config.json
+
+{
+  "DEFAULT": {
+    "DATABASE_LOCATION": "/blockchain/",
+    "DATABASE_NAME": "blockchain_database.bc"
+  }
+}
 ```
 
 ## Examples
