@@ -13,22 +13,23 @@ In this repository you can found a simple Database based on blockchain technolog
 Python >= 3.6
 
 ## Project structure
-- Project root
-    - BlockchainDataBase
-        - Data
-            - \__init\__.py
-            - DBManage.py
-        - \__init\__.py
-        - Block.py
-        - Blockchain.py
-    - Test
-        - Test1.py
-        - Test2.py
-        - Test3.py
-        - Test4.py
-    - LICENSE
-    - README.md
-    - setup.py
+```bash
+├── BlockchainDataBase
+│   ├── Data
+│   │   ├── __init__.py
+│   │   ├── DBManage.py
+│   ├── __init__.py
+│   ├── Block.py
+│   ├── Blockchain.py
+├── Test
+│   ├── Test1.py
+│   ├── Test2.py
+│   ├── Test3.py
+│   ├── Test4.py
+├── LICENSE
+├── README.md
+├── setup.py
+```
 
 ## Test
 - **Test1.py**, This test just creates the genesis block of the blockchain.
