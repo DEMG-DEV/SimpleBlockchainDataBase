@@ -1,4 +1,4 @@
-# SimpleBlockchainDatabase
+# SimpleBlockchainDatabase [![Open Source Helpers](https://www.codetriage.com/demg-dev/simpleblockchaindatabase/badges/users.svg)](https://www.codetriage.com/demg-dev/simpleblockchaindatabase)
 In this repository you can found a simple Database based on blockchain technology.
 
 > **IN THIS MOMENT THE DATABASE JUST WORK AS LOCALLY AND ONE DEVICE**
