@@ -4,7 +4,7 @@ In this repository you can found a simple Database based on blockchain technolog
 > **IN THIS MOMENT THE DATABASE JUST WORK AS LOCALLY AND ONE DEVICE**
 
 ## Version
-**1.1.3**
+**1.1.4**
 
 ## LICENSE
 [MIT License](LICENSE)
