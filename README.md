@@ -52,9 +52,8 @@ python -m pip install --index-url https://test.pypi.org/simple/ BlockchainDataBa
 On the folder you found a configuration file in a JSON format, if you want to change the folder on the database or database name you do in this file.
 ```
 # The data saves on %APPDATA% directory.
-├── BlockchainDataBase
-│   ├── Data
-│   │   ├── config.json
+├── blockchain
+│   ├── config.json
 ```
 ```
 config.json
