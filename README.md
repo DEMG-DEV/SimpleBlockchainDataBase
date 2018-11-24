@@ -4,7 +4,7 @@ In this repository you can found a simple Database based on blockchain technolog
 > **IN THIS MOMENT THE DATABASE JUST WORK AS LOCALLY AND ONE DEVICE**
 
 ## Version
-**1.1.2**
+**1.1.3**
 
 ## LICENSE
 [MIT License](LICENSE)
@@ -18,7 +18,6 @@ Python >= 3.6
 │   ├── Data
 │   │   ├── __init__.py
 │   │   ├── DBManage.py
-│   │   ├── config.json
 │   ├── __init__.py
 │   ├── Block.py
 │   ├── Blockchain.py
@@ -39,14 +38,14 @@ Python >= 3.6
 - **Test4.py**, This shows all the blocks. 
 
 ## Install
-From test.pypi.org
-```
-python -m pip install --index-url https://test.pypi.org/simple/ BlockchainDataBase
-```
-
 From official pypi.org
 ```
 python -m pip install BlockchainDataBase
+```
+
+From test.pypi.org
+```
+python -m pip install --index-url https://test.pypi.org/simple/ BlockchainDataBase
 ```
 
 ## Configuration
@@ -61,10 +60,10 @@ On the folder you found a configuration file in a JSON format, if you want to ch
 config.json
 
 {
-  "DEFAULT": {
-    "DATABASE_LOCATION": "/blockchain/",
-    "DATABASE_NAME": "blockchain_database.bc"
-  }
+    "DEFAULT": {
+        "DATABASE_NAME": "blockchain_database.bc",
+        "CONFIG_FILE": "config.json"
+    }
 }
 ```
 
