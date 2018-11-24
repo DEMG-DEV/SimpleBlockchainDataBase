@@ -1,9 +1,0 @@
-{
-  "DEFAULT": {
-    "DATABASE_LOCATION": "/blockchain/",
-    "DATABASE_NAME": "blockchain_database.bc"
-  },
-  "ENCRYPT": {
-    "KEY": ""
-  }
-}
